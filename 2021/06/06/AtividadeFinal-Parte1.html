@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Projeto Final da Disciplina Planejamento de Experimentos e Análise Estatística de Dados (EAH-5002) | Planejamento de Experimentos e Análise Estatística de Dados (EAH5002)</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Projeto Final da Disciplina Planejamento de Experimentos e Análise Estatística de Dados (EAH-5002)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Informações gerais sobre o dataset, descrição e classificação das variáveis." />
+<meta property="og:description" content="Informações gerais sobre o dataset, descrição e classificação das variáveis." />
+<link rel="canonical" href="https://victor-marchesini.github.io/usp_eah5002/2021/06/06/AtividadeFinal-Parte1.html" />
+<meta property="og:url" content="https://victor-marchesini.github.io/usp_eah5002/2021/06/06/AtividadeFinal-Parte1.html" />
+<meta property="og:site_name" content="Planejamento de Experimentos e Análise Estatística de Dados (EAH5002)" />
+<meta property="og:image" content="https://victor-marchesini.github.io/usp_eah5002/images/chart-preview.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-06-06T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Informações gerais sobre o dataset, descrição e classificação das variáveis.","url":"https://victor-marchesini.github.io/usp_eah5002/2021/06/06/AtividadeFinal-Parte1.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://victor-marchesini.github.io/usp_eah5002/2021/06/06/AtividadeFinal-Parte1.html"},"headline":"Projeto Final da Disciplina Planejamento de Experimentos e Análise Estatística de Dados (EAH-5002)","dateModified":"2021-06-06T00:00:00-05:00","datePublished":"2021-06-06T00:00:00-05:00","image":"https://victor-marchesini.github.io/usp_eah5002/images/chart-preview.png","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/usp_eah5002/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://victor-marchesini.github.io/usp_eah5002/feed.xml" title="Planejamento de Experimentos e Análise Estatística de Dados (EAH5002)" /><link rel="shortcut icon" type="image/x-icon" href="/usp_eah5002/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/usp_eah5002/">Planejamento de Experimentos e Análise Estatística de Dados (EAH5002)</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/usp_eah5002/about/">About Me</a><a class="page-link" href="/usp_eah5002/search/">Search</a><a class="page-link" href="/usp_eah5002/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Projeto Final da Disciplina Planejamento de Experimentos e Análise Estatística de Dados (EAH-5002)</h1><p class="page-description">Informações gerais sobre o dataset, descrição e classificação das variáveis.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-06-06T00:00:00-05:00" itemprop="datePublished">
+        Jun 6, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/victor-marchesini/usp_eah5002/tree/master/_notebooks/2021-06-06-AtividadeFinal-Parte1.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/usp_eah5002/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/victor-marchesini/usp_eah5002/master?filepath=_notebooks%2F2021-06-06-AtividadeFinal-Parte1.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/usp_eah5002/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/victor-marchesini/usp_eah5002/blob/master/_notebooks/2021-06-06-AtividadeFinal-Parte1.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/usp_eah5002/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Informações-sobre-o-Dataset-Escolhido">Informações sobre o Dataset Escolhido </a></li>
+<li class="toc-entry toc-h2"><a href="#Objetivos-e-Metodologia">Objetivos e Metodologia </a></li>
+<li class="toc-entry toc-h2"><a href="#Estatística-Descritiva:">Estatística Descritiva: </a></li>
+<li class="toc-entry toc-h2"><a href="#Notas">Notas </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-06-06-AtividadeFinal-Parte1.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Informações-sobre-o-Dataset-Escolhido">
+<a class="anchor" href="#Informa%C3%A7%C3%B5es-sobre-o-Dataset-Escolhido" aria-hidden="true"><span class="octicon octicon-link"></span></a>Informações sobre o Dataset Escolhido<a class="anchor-link" href="#Informa%C3%A7%C3%B5es-sobre-o-Dataset-Escolhido"> </a>
+</h2>
+<ol>
+<li>Origem e contexto</li>
+</ol>
+<p>Desde 2009, com a pandemia de Influenza A(H1N1)pdm09, a Secretaria de Vigilância em Saúde (SVS), vinculada ao Ministério da Saúde, desenvolve a vigilância da Síndrome Respiratória Aguda Grave (SRAG) no Brasil. Em 2020 a vigilância da COVID-19 foi incorporada na rede de vigilância da Influenza e outros vírus respiratórios.</p>
+<p>Todos os bancos de dados epidemiológicos de SRAG, desde 2009 até os dias atuais (2021), são disponibilizados no portal <a href="https://opendatasus.saude.gov.br">https://opendatasus.saude.gov.br</a>.</p>
+<ol>
+<li>Periodicidade e Atualizações</li>
+</ol>
+<p>Os dados da vigilância de SRAG no Brasil disponibilizados estão sujeitos a alterações decorrentes da investigação pelas equipes de vigilância epidemiológica que desenvolvem o serviço nas três esferas de gestão.</p>
+<p>Os dados de são disponibilizados semanalmente, às quartas-feiras, podendo, excepcionalmente, a atualização ocorrer em outro dia.</p>
+<ol>
+<li>Delimitação dos dados selecionados para o estudo</li>
+</ol>
+<p>Para o presente estudo foram considerados os dados disponíveis para o ano de 2020 (<a href="https://s3-sa-east-1.amazonaws.com/ckan.saude.gov.br/SRAG/2020/INFLUD-31-05-2021.csv">link</a>) e 2021 (<a href="https://s3-sa-east-1.amazonaws.com/ckan.saude.gov.br/SRAG/2021/INFLUD21-31-05-2021.csv">link</a>), sendo que a última atualização de ambos foi realizada no dia 02/jun/2021.</p>
+<p>Considerando os dados destas versões, existem 2.119.441 linhas, que se referem a casos de SRAG. Nos arquivos em csv disponibilizados pelo opendatasus existem 154 colunas, sendo que na primeira atividade desta disciplina (Atividade 1 - Meu primeiro Dataset) foi apresentada uma breve descrição de cada uma delas, além de serem classificadas.</p>
+<p>Para a atividade final da disciplina foram escolhidas 11 variáveis (colunas).</p>
+<ol>
+<li>Coleta dos dados</li>
+</ol>
+<p>Os dados analisados são obtidos a partir do preenchimento de uma "Ficha de Registro Individual" (<a href="https://opendatasus.saude.gov.br/dataset/9f76e80f-a2f1-4662-9e37-71084eae23e3/resource/bd725e4c-c869-400f-a479-9b544c2812b4/download/ficha-srag-final-27.07.2020_final.pdf">link</a>), cujo preenchimento e envio para o SISTEMA  DE INFORMAÇÃO  DE  VIGILÂNCIA  EPIDEMIOLÓGICA  DA GRIPE (SIVEP Gripe) é mandatório para os casos de SRAG hospitalizados ou os óbitos por SRAG, independente de hospitalização. Portanto, os dados em questão não se referem a amostras dos casos, e sim ao conjunto de todos os casos que os sistema de vigilância consegue captar.</p>
+<ol>
+<li>Observações, casos, instâncias</li>
+</ol>
+<p>Cada linha se refere a um caso relatado por um profissional de saúde, ligado a um paciente. É possível que um mesmo paciente seja acometido pela SRAG mais de uma vez. Portanto, um indivíduo poderia ter mais de uma linha associado a ele. Como não há um identificador único de cada pessoa nos dados disponibilizados pelo opendatasus, não é possível saber quais são os casos reincidentes.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Objetivos-e-Metodologia">
+<a class="anchor" href="#Objetivos-e-Metodologia" aria-hidden="true"><span class="octicon octicon-link"></span></a>Objetivos e Metodologia<a class="anchor-link" href="#Objetivos-e-Metodologia"> </a>
+</h2>
+<ol>
+<li>
+<p>Que tipo de pesquisa/pergunta você pretende fazer com este dataset?</p>
+<ul>
+<li>
+<p>A letalidade[^1] da SRAG é a mesma em todos Estados Brasileiros?</p>
+</li>
+<li>
+<p>Quais fatores sociais impactam mais essa letalidade?</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>Que tipo(s) de análise(s) estatística(s) você aplicaria para responder às suas perguntas?<blockquote>
+<p>Testes de hipóteses para avaliar existem diferenças significativas na letalidade em determinados segmentos.</p>
+</blockquote>
+</li>
+</ol>
+<ol>
+<li>
+<p>Qual seria um título adequado para o seu trabalho?</p>
+<blockquote>
+<p>"Letalidade da SRAG no Brasil:análise de diferenças sóciais e regionais"</p>
+</blockquote>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Estatística-Descritiva:">
+<a class="anchor" href="#Estat%C3%ADstica-Descritiva:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Estatística Descritiva:<a class="anchor-link" href="#Estat%C3%ADstica-Descritiva:"> </a>
+</h2>
+<p>Verificar link:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Notas">
+<a class="anchor" href="#Notas" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notas<a class="anchor-link" href="#Notas"> </a>
+</h2>
+<p>). É importante ressaltar que essa medida é diferente da mortalidade, que é a razão entre o número de óbitos e a população em risco, e que vai depender tanto da letalidade quanto da incidência da doença na população.</p>
+<div class="footnotes">
+<hr>
+<ol></ol>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="victor-marchesini/usp_eah5002"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/usp_eah5002/2021/06/06/AtividadeFinal-Parte1.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/usp_eah5002/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/usp_eah5002/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/usp_eah5002/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Página referente à disciplina Planejamento de Experimentos e Análise Estatística de Dados (EAH5002, USP).</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/victor-marchesini" title="victor-marchesini"><svg class="svg-icon grey"><use xlink:href="/usp_eah5002/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/MarchesiniVicto" title="MarchesiniVicto"><svg class="svg-icon grey"><use xlink:href="/usp_eah5002/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
