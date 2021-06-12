@@ -179,16 +179,13 @@ window.onload = wrap_img;
 </h2>
 <p><strong>Que tipo de pesquisa/pergunta você pretende fazer com este dataset?</strong></p>
 
-<pre><code>- A letalidade da SRAG é a mesma em todos Estados Brasileiros?
+<pre><code>- A letalidade (ver nota 1) da SRAG é a mesma em todos Estados Brasileiros?
 - Quais fatores sociais impactam mais essa letalidade?
-
-
 </code></pre>
 <p><strong>Que tipo(s) de análise(s) estatística(s) você aplicaria para responder às suas perguntas?</strong></p>
 
-<pre><code>Testes de hipóteses para avaliar existem diferenças significativas na letalidade em determinados segmentos.
-
-
+<pre><code>Testes de hipóteses para avaliar existem diferenças significativas na letalidade em 
+determinados segmentos.
 </code></pre>
 <p><strong>Qual seria um título adequado para o seu trabalho?</strong></p>
 
@@ -225,149 +222,15 @@ Estatística descritiva
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">col</span> <span class="o">=</span> <span class="n">df_srag_selected</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">var_dict</span><span class="p">[</span><span class="n">col</span><span class="p">]</span>
-<span class="c1"># df_srag_selected.describe(include=['O'])</span>
-<span class="n">include_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'include'</span><span class="p">:[</span><span class="s1">'O'</span><span class="p">]}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>CLASSI_FIN</th>
-      <th>CS_ESCOL_N</th>
-      <th>CS_RACA</th>
-      <th>CS_SEXO</th>
-      <th>DT_SIN_PRI</th>
-      <th>DT_NASC</th>
-      <th>EVOLUCAO</th>
-      <th>FATOR_RISC</th>
-      <th>SG_UF_INTE</th>
-      <th>UTI</th>
-      <th>SUPORT_VEN</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>2119441</td>
-      <td>2119441</td>
-      <td>2119441</td>
-      <td>2119441</td>
-      <td>2119441</td>
-      <td>2116425</td>
-      <td>2119441</td>
-      <td>2119441</td>
-      <td>2119441</td>
-      <td>2119441</td>
-      <td>2119441</td>
-    </tr>
-    <tr>
-      <th>unique</th>
-      <td>6</td>
-      <td>8</td>
-      <td>7</td>
-      <td>3</td>
-      <td>520</td>
-      <td>38358</td>
-      <td>5</td>
-      <td>2</td>
-      <td>28</td>
-      <td>4</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>top</th>
-      <td>COVID-19</td>
-      <td>nd</td>
-      <td>branca</td>
-      <td>M</td>
-      <td>2021-03-01 00:00:00</td>
-      <td>1950-01-01 00:00:00</td>
-      <td>cura</td>
-      <td>sim</td>
-      <td>SP</td>
-      <td>nao</td>
-      <td>2_sim | nao_invasivo</td>
-    </tr>
-    <tr>
-      <th>freq</th>
-      <td>1348273</td>
-      <td>689606</td>
-      <td>840424</td>
-      <td>1149912</td>
-      <td>15219</td>
-      <td>199</td>
-      <td>1111083</td>
-      <td>1279122</td>
-      <td>628469</td>
-      <td>1163902</td>
-      <td>965179</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Notas">
 <a class="anchor" href="#Notas" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notas<a class="anchor-link" href="#Notas"> </a>
 </h2>
-<p>). É importante ressaltar que essa medida é diferente da mortalidade, que é a razão entre o número de óbitos e a população em risco, e que vai depender tanto da letalidade quanto da incidência da doença na população.</p>
-<div class="footnotes">
-<hr>
-<ol></ol>
-</div>
+<ol>
+<li>Dentro da epidemiologia, o conceito de letalidade refere-se à razão entre o número de óbitos por determinada doença pelo número de casos da mesma doença. Portanto, é uma medida da gravidade da doença (<a href="https://unasus2.moodle.ufsc.br/pluginfile.php/33454/mod_resource/content/1/un1/top5_3.html">Conceitos da Epidemiologia - UFSC</a>). É importante ressaltar que essa medida é diferente da mortalidade, que é a razão entre o número de óbitos e a população em risco, e que vai depender tanto da letalidade quanto da incidência da doença na população.</li>
+</ol>
 
 </div>
 </div>
