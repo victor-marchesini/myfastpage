@@ -116,11 +116,14 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Coleta-dos-dados">Coleta dos dados </a></li>
 <li class="toc-entry toc-h3"><a href="#Periodicidade-e-Atualizações">Periodicidade e Atualizações </a></li>
 <li class="toc-entry toc-h3"><a href="#Observações,-casos,-instâncias">Observações, casos, instâncias </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Objetivos-e-Metodologia">Objetivos e Metodologia </a>
+<ul>
 <li class="toc-entry toc-h3"><a href="#Delimitação-dos-dados-selecionados-para-o-estudo">Delimitação dos dados selecionados para o estudo </a></li>
 <li class="toc-entry toc-h3"><a href="#Dados-faltantes-(missing-data)">Dados faltantes (missing data) </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#Objetivos-e-Metodologia">Objetivos e Metodologia </a></li>
 <li class="toc-entry toc-h2"><a href="#Descrição-das-Variáveis">Descrição das Variáveis </a></li>
 <li class="toc-entry toc-h2"><a href="#Estatística-Descritiva">Estatística Descritiva </a></li>
 <li class="toc-entry toc-h2"><a href="#Notas">Notas </a></li>
@@ -157,16 +160,6 @@ window.onload = wrap_img;
 <a class="anchor" href="#Observa%C3%A7%C3%B5es,-casos,-inst%C3%A2ncias" aria-hidden="true"><span class="octicon octicon-link"></span></a>Observações, casos, instâncias<a class="anchor-link" href="#Observa%C3%A7%C3%B5es,-casos,-inst%C3%A2ncias"> </a>
 </h3>
 <p>Cada linha se refere a um caso relatado por um profissional de saúde, ligado a um paciente. É possível que um mesmo paciente seja acometido pela SRAG mais de uma vez. Portanto, um indivíduo poderia ter mais de uma linha associado a ele. Como não há um identificador único de cada pessoa nos dados disponibilizados pelo opendatasus, não é possível saber quais são os casos reincidentes.</p>
-<h3 id="Delimitação-dos-dados-selecionados-para-o-estudo">
-<a class="anchor" href="#Delimita%C3%A7%C3%A3o-dos-dados-selecionados-para-o-estudo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Delimitação dos dados selecionados para o estudo<a class="anchor-link" href="#Delimita%C3%A7%C3%A3o-dos-dados-selecionados-para-o-estudo"> </a>
-</h3>
-<p>Para o presente estudo foram considerados os dados disponíveis para o ano de 2020 (<a href="https://s3-sa-east-1.amazonaws.com/ckan.saude.gov.br/SRAG/2020/INFLUD-31-05-2021.csv">link</a>) e 2021 (<a href="https://s3-sa-east-1.amazonaws.com/ckan.saude.gov.br/SRAG/2021/INFLUD21-31-05-2021.csv">link</a>), sendo que a última atualização de ambos foi realizada no dia 02/jun/2021.</p>
-<p>Considerando os dados destas versões, existem 2.119.441 linhas, que se referem a casos de SRAG. Nos arquivos em csv disponibilizados pelo opendatasus existem 154 colunas, sendo que na primeira atividade desta disciplina (Atividade 1 - Meu primeiro Dataset) foi apresentada uma breve descrição de cada uma delas, além de serem classificadas.</p>
-<p>Para a atividade final da disciplina foram escolhidas 11 variáveis (colunas).</p>
-<h3 id="Dados-faltantes-(missing-data)">
-<a class="anchor" href="#Dados-faltantes-(missing-data)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dados faltantes (<em>missing data</em>)<a class="anchor-link" href="#Dados-faltantes-(missing-data)"> </a>
-</h3>
-<p>Existem valores faltantes nas variáveis selecionadas para este estudo, seja por falta de preenchimento ou por não ser aplicável. Na análise individual de cada variável esses valores serão identificados como "nd". Em algumas análises esses casos não serão utilizados, assim como os casos com dados preenchidos com valores que não interessam para análise (ex: "ignorado"). Para cada análise deixaremos claro qual percentual dos casos disponíveis foi utilizado.</p>
 
 </div>
 </div>
@@ -177,9 +170,12 @@ window.onload = wrap_img;
 <h2 id="Objetivos-e-Metodologia">
 <a class="anchor" href="#Objetivos-e-Metodologia" aria-hidden="true"><span class="octicon octicon-link"></span></a>Objetivos e Metodologia<a class="anchor-link" href="#Objetivos-e-Metodologia"> </a>
 </h2>
+<blockquote>
+<p>Sobre o conceito de "letalidade", ver a <a href="#Notas">Nota 1</a></p>
+</blockquote>
 <p><strong>Que tipo de pesquisa/pergunta você pretende fazer com este dataset?</strong></p>
 
-<pre><code>- A letalidade (ver nota 1) da SRAG é a mesma em todos Estados Brasileiros?
+<pre><code>- A letalidade da SRAG é a mesma em todos Estados Brasileiros?
 - Quais fatores sociais impactam mais essa letalidade?
 </code></pre>
 <p><strong>Que tipo(s) de análise(s) estatística(s) você aplicaria para responder às suas perguntas?</strong></p>
@@ -189,17 +185,90 @@ determinados segmentos.
 </code></pre>
 <p><strong>Qual seria um título adequado para o seu trabalho?</strong></p>
 
-<pre><code>"Letalidade da SRAG no Brasil: análise de diferenças sóciais e regionais"</code></pre>
+<pre><code>"Letalidade da SRAG no Brasil:análise de diferenças sóciais e regionais"    
+
+</code></pre>
+<h3 id="Delimitação-dos-dados-selecionados-para-o-estudo">
+<a class="anchor" href="#Delimita%C3%A7%C3%A3o-dos-dados-selecionados-para-o-estudo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Delimitação dos dados selecionados para o estudo<a class="anchor-link" href="#Delimita%C3%A7%C3%A3o-dos-dados-selecionados-para-o-estudo"> </a>
+</h3>
+<p>Para o presente estudo foram considerados os dados disponíveis para o ano de 2020 (<a href="https://s3-sa-east-1.amazonaws.com/ckan.saude.gov.br/SRAG/2020/INFLUD-31-05-2021.csv">link</a>) e 2021 (<a href="https://s3-sa-east-1.amazonaws.com/ckan.saude.gov.br/SRAG/2021/INFLUD21-31-05-2021.csv">link</a>), sendo que a última atualização de ambos foi realizada no dia 02/jun/2021.</p>
+<p>Considerando os dados destas versões, existem 2.119.441 linhas, que se referem a casos de SRAG.</p>
+<p>Nos arquivos em csv disponibilizados pelo opendatasus existem 154 colunas, sendo que na primeira atividade desta disciplina, "Atividade 1 - Meu primeiro Dataset" (<a href="/usp_eah5002/2021/04/07/Atividade1-Descrevendo-dataset.html">link</a>) foi apresentada uma breve descrição de cada uma delas, além de serem classificadas.</p>
+<p>Para a atividade final da disciplina foram escolhidas 11 variáveis (colunas), que possuem relação com os objetivos do estudo.</p>
+<h3 id="Dados-faltantes-(missing-data)">
+<a class="anchor" href="#Dados-faltantes-(missing-data)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dados faltantes (<em>missing data</em>)<a class="anchor-link" href="#Dados-faltantes-(missing-data)"> </a>
+</h3>
+<p>Existem valores faltantes nas variáveis selecionadas para este estudo, seja por falta de preenchimento ou por não ser aplicável. Na análise individual de cada variável esses valores serão identificados como "nd". Em algumas análises esses casos não serão utilizados, assim como os casos com dados preenchidos com valores que não interessam para análise (ex: "ignorado"). Para cada análise deixaremos claro qual percentual dos casos disponíveis foi utilizado.</p>
 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_srag</span><span class="p">[</span><span class="s1">'dv_idade_anos'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_srag</span><span class="p">[</span><span class="s1">'dv_idade_anos'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_srag</span>
+
+<span class="n">col</span> <span class="o">=</span> <span class="s1">'DT_NASC'</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df_srag</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'coerce'</span><span class="p">,</span><span class="n">dayfirst</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="n">discrete</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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%0A">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Descrição-das-Variáveis">
 <a class="anchor" href="#Descri%C3%A7%C3%A3o-das-Vari%C3%A1veis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Descrição das Variáveis<a class="anchor-link" href="#Descri%C3%A7%C3%A3o-das-Vari%C3%A1veis"> </a>
 </h2>
+<pre><code>Variáveis
+    Identifique-as e classifique-as.
+
+</code></pre>
+<p><a href="https://opendatasus.saude.gov.br/dataset/9f76e80f-a2f1-4662-9e37-71084eae23e3/resource/b3321e55-24e9-49ab-8651-29cf5c8f3179/download/dicionario-de-dados-srag-hospitalizado-27.07.2020-final.pdf">link para dicionário de dados</a></p>
+
 </div>
 </div>
 </div>
@@ -209,12 +278,7 @@ determinados segmentos.
 <h2 id="Estatística-Descritiva">
 <a class="anchor" href="#Estat%C3%ADstica-Descritiva" aria-hidden="true"><span class="octicon octicon-link"></span></a>Estatística Descritiva<a class="anchor-link" href="#Estat%C3%ADstica-Descritiva"> </a>
 </h2>
-<pre><code>Variáveis
-    Identifique-as e classifique-as.
-
-
-
-Estatística descritiva
+<pre><code>Estatística descritiva
     Apresente todas as variáveis individualmente e cruzando-as entre si, quando necessário. Exemplo: se você for apresentar a variável peso e a sua amostra contiver homens e mulheres, vale separar a variável entre homens e mulheres.
     Utilize medidas-resumo e tabelas de distribuição de frequências e gráficos 
     Utilize números de casas decimais adequados</code></pre>
