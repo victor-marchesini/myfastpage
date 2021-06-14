@@ -78,7 +78,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -150,7 +150,7 @@ window.onload = wrap_img;
 <h3 id="Coleta-dos-dados">
 <a class="anchor" href="#Coleta-dos-dados" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coleta dos dados<a class="anchor-link" href="#Coleta-dos-dados"> </a>
 </h3>
-<p>Os dados analisados são obtidos a partir do preenchimento de uma "Ficha de Registro Individual" (<a href="https://opendatasus.saude.gov.br/dataset/9f76e80f-a2f1-4662-9e37-71084eae23e3/resource/bd725e4c-c869-400f-a479-9b544c2812b4/download/ficha-srag-final-27.07.2020_final.pdf">link</a>), cujo preenchimento e envio para o SISTEMA  DE INFORMAÇÃO  DE  VIGILÂNCIA  EPIDEMIOLÓGICA  DA GRIPE (SIVEP Gripe) é mandatório para os casos de SRAG hospitalizados ou os óbitos por SRAG, independente de hospitalização. Portanto, os dados em questão não se referem a amostras dos casos, e sim ao conjunto de todos os casos que os sistema de vigilância consegue captar.</p>
+<p>Os dados analisados são obtidos a partir do preenchimento de uma "Ficha de Registro Individual" (<a href="https://opendatasus.saude.gov.br/dataset/9f76e80f-a2f1-4662-9e37-71084eae23e3/resource/bd725e4c-c869-400f-a479-9b544c2812b4/download/ficha-srag-final-27.07.2020_final.pdf" title="Ficha de Registro Individual">link</a>), cujo preenchimento e envio para o SISTEMA  DE INFORMAÇÃO  DE  VIGILÂNCIA  EPIDEMIOLÓGICA  DA GRIPE (SIVEP Gripe) é mandatório para os casos de SRAG hospitalizados ou os óbitos por SRAG, independente de hospitalização. Portanto, os dados em questão não se referem a amostras dos casos, e sim ao conjunto de todos os casos que os sistema de vigilância consegue captar.</p>
 <h3 id="Periodicidade-e-Atualizações">
 <a class="anchor" href="#Periodicidade-e-Atualiza%C3%A7%C3%B5es" aria-hidden="true"><span class="octicon octicon-link"></span></a>Periodicidade e Atualizações<a class="anchor-link" href="#Periodicidade-e-Atualiza%C3%A7%C3%B5es"> </a>
 </h3>
@@ -171,7 +171,7 @@ window.onload = wrap_img;
 <a class="anchor" href="#Objetivos-e-Metodologia" aria-hidden="true"><span class="octicon octicon-link"></span></a>Objetivos e Metodologia<a class="anchor-link" href="#Objetivos-e-Metodologia"> </a>
 </h2>
 <blockquote>
-<p>Sobre o conceito de "letalidade", ver a <a href="#Notas">Nota 1</a></p>
+<p>Sobre o conceito de "letalidade", ver a <a href="#Notas" title="Nota 1">Nota 1</a></p>
 </blockquote>
 <p><strong>Que tipo de pesquisa/pergunta você pretende fazer com este dataset?</strong></p>
 
@@ -194,7 +194,7 @@ determinados segmentos.
 <p>Para o presente estudo foram considerados os dados disponíveis para o ano de 2020 (<a href="https://s3-sa-east-1.amazonaws.com/ckan.saude.gov.br/SRAG/2020/INFLUD-31-05-2021.csv">link</a>) e 2021 (<a href="https://s3-sa-east-1.amazonaws.com/ckan.saude.gov.br/SRAG/2021/INFLUD21-31-05-2021.csv">link</a>), sendo que a última atualização de ambos foi realizada no dia 02/jun/2021.</p>
 <p>Considerando os dados destas versões, existem 2.119.441 linhas, que se referem a casos de SRAG.</p>
 <p>Nos arquivos em csv disponibilizados pelo opendatasus existem 154 colunas, sendo que na primeira atividade desta disciplina, "Atividade 1 - Meu primeiro Dataset" (<a href="/usp_eah5002/2021/04/07/Atividade1-Descrevendo-dataset.html">link</a>) foi apresentada uma breve descrição de cada uma delas, além de serem classificadas.</p>
-<p>Para a atividade final da disciplina foram escolhidas 11 variáveis (colunas), que possuem relação com os objetivos do estudo.</p>
+<p>Para a atividade final da disciplina foram escolhidas 11 variáveis (colunas), que possuem relação com os objetivos do estudo. Além disso, foi adicionada uma variável derivada "dv_idade_anos", obtida a partir de duas variáveis originais (data de nascimento e data dos primeiros sintomas). Com isso, serão consideradas 12 variáveis no estudo.</p>
 <h3 id="Dados-faltantes-(missing-data)">
 <a class="anchor" href="#Dados-faltantes-(missing-data)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dados faltantes (<em>missing data</em>)<a class="anchor-link" href="#Dados-faltantes-(missing-data)"> </a>
 </h3>
@@ -203,23 +203,293 @@ determinados segmentos.
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Descrição-das-Variáveis">
+<a class="anchor" href="#Descri%C3%A7%C3%A3o-das-Vari%C3%A1veis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Descrição das Variáveis<a class="anchor-link" href="#Descri%C3%A7%C3%A3o-das-Vari%C3%A1veis"> </a>
+</h2>
+<pre><code>Variáveis
+    Identifique-as e classifique-as.
+
+</code></pre>
+<p>O Dicionário de dados de todas as variáveis disponíveis no banco do SIVEP-Gripe estão disponíveis neste <a href="https://opendatasus.saude.gov.br/dataset/9f76e80f-a2f1-4662-9e37-71084eae23e3/resource/b3321e55-24e9-49ab-8651-29cf5c8f3179/download/dicionario-de-dados-srag-hospitalizado-27.07.2020-final.pdf" title="Dicionário de dados">link</a>. Nem todas variáveis informadas no dicionário são disponibilizadas no opendatasus (ex: 6- CPF do paciente).</p>
+<p>Como foi mencionado acima, para este estudo foram selecionadas 12 variáveis. Destas, 9 são qualitativas, sendo 2 ordinais ("CS_ESCOL_N" e "SUPORT_VEN") e 7 nominais. Na tabela a seguir são apresentadas a descrição e algumas informações referentes a estas variáveis.</p>
+<p><strong>Tabela 1 - Variáveis qualitativas</strong></p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_srag</span><span class="p">[</span><span class="s1">'dv_idade_anos'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_srag</span><span class="p">[</span><span class="s1">'dv_idade_anos'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-</pre></div>
+<div class="output_wrapper">
+<div class="output">
 
-    </div>
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<style type="text/css">
+    #T_d2252_ tr:hover {
+          background-color: #00BBBB;
+    }    #T_d2252_ th {
+          font-size: 110%;
+          text-align: center;
+    }    #T_d2252_ td {
+          text-align: center;
+    }    #T_d2252_ tbody .col5 {
+          width: 250px;
+          text-align: left;
+          padding-left: 20px;
+    }</style>
+<table id="T_d2252_">
+<thead>    <tr>        <th class="blank level0"></th>        <th class="col_heading level0 col0">Variável</th>        <th class="col_heading level0 col1">Contagem</th>        <th class="col_heading level0 col2">Valores únicos</th>        <th class="col_heading level0 col3">Mais frequente</th>        <th class="col_heading level0 col4">Maior frequência</th>        <th class="col_heading level0 col5">Descrição</th>    </tr>
+</thead>
+<tbody>
+                <tr>
+                        <th id="T_d2252_level0_row0" class="row_heading level0 row0">1</th>
+                        <td id="T_d2252_row0_col0" class="data row0 col0">CLASSI_FIN</td>
+                        <td id="T_d2252_row0_col1" class="data row0 col1">2119441</td>
+                        <td id="T_d2252_row0_col2" class="data row0 col2">6</td>
+                        <td id="T_d2252_row0_col3" class="data row0 col3">COVID-19</td>
+                        <td id="T_d2252_row0_col4" class="data row0 col4">1348273</td>
+                        <td id="T_d2252_row0_col5" class="data row0 col5">Classificação final do caso (diagnóstico).</td>
+            </tr>
+            <tr>
+                        <th id="T_d2252_level0_row1" class="row_heading level0 row1">2</th>
+                        <td id="T_d2252_row1_col0" class="data row1 col0">CS_ESCOL_N</td>
+                        <td id="T_d2252_row1_col1" class="data row1 col1">2119441</td>
+                        <td id="T_d2252_row1_col2" class="data row1 col2">8</td>
+                        <td id="T_d2252_row1_col3" class="data row1 col3">nd</td>
+                        <td id="T_d2252_row1_col4" class="data row1 col4">689606</td>
+                        <td id="T_d2252_row1_col5" class="data row1 col5">Nível de escolaridade do paciente.</td>
+            </tr>
+            <tr>
+                        <th id="T_d2252_level0_row2" class="row_heading level0 row2">3</th>
+                        <td id="T_d2252_row2_col0" class="data row2 col0">CS_RACA</td>
+                        <td id="T_d2252_row2_col1" class="data row2 col1">2119441</td>
+                        <td id="T_d2252_row2_col2" class="data row2 col2">7</td>
+                        <td id="T_d2252_row2_col3" class="data row2 col3">branca</td>
+                        <td id="T_d2252_row2_col4" class="data row2 col4">840424</td>
+                        <td id="T_d2252_row2_col5" class="data row2 col5">Cor ou raça declarada pelo paciente.</td>
+            </tr>
+            <tr>
+                        <th id="T_d2252_level0_row3" class="row_heading level0 row3">4</th>
+                        <td id="T_d2252_row3_col0" class="data row3 col0">CS_SEXO</td>
+                        <td id="T_d2252_row3_col1" class="data row3 col1">2119441</td>
+                        <td id="T_d2252_row3_col2" class="data row3 col2">3</td>
+                        <td id="T_d2252_row3_col3" class="data row3 col3">M</td>
+                        <td id="T_d2252_row3_col4" class="data row3 col4">1149912</td>
+                        <td id="T_d2252_row3_col5" class="data row3 col5">Sexo do paciente.</td>
+            </tr>
+            <tr>
+                        <th id="T_d2252_level0_row4" class="row_heading level0 row4">5</th>
+                        <td id="T_d2252_row4_col0" class="data row4 col0">EVOLUCAO</td>
+                        <td id="T_d2252_row4_col1" class="data row4 col1">2119441</td>
+                        <td id="T_d2252_row4_col2" class="data row4 col2">5</td>
+                        <td id="T_d2252_row4_col3" class="data row4 col3">cura</td>
+                        <td id="T_d2252_row4_col4" class="data row4 col4">1111083</td>
+                        <td id="T_d2252_row4_col5" class="data row4 col5">Evolução do caso (desfecho).</td>
+            </tr>
+            <tr>
+                        <th id="T_d2252_level0_row5" class="row_heading level0 row5">6</th>
+                        <td id="T_d2252_row5_col0" class="data row5 col0">FATOR_RISC</td>
+                        <td id="T_d2252_row5_col1" class="data row5 col1">2119441</td>
+                        <td id="T_d2252_row5_col2" class="data row5 col2">2</td>
+                        <td id="T_d2252_row5_col3" class="data row5 col3">sim</td>
+                        <td id="T_d2252_row5_col4" class="data row5 col4">1279122</td>
+                        <td id="T_d2252_row5_col5" class="data row5 col5">Paciente apresenta algum fator de risco?</td>
+            </tr>
+            <tr>
+                        <th id="T_d2252_level0_row6" class="row_heading level0 row6">7</th>
+                        <td id="T_d2252_row6_col0" class="data row6 col0">SG_UF_INTE</td>
+                        <td id="T_d2252_row6_col1" class="data row6 col1">2119441</td>
+                        <td id="T_d2252_row6_col2" class="data row6 col2">28</td>
+                        <td id="T_d2252_row6_col3" class="data row6 col3">SP</td>
+                        <td id="T_d2252_row6_col4" class="data row6 col4">628469</td>
+                        <td id="T_d2252_row6_col5" class="data row6 col5">Unidade Federativa de internação do paciente (conforme tabela IBGE).</td>
+            </tr>
+            <tr>
+                        <th id="T_d2252_level0_row7" class="row_heading level0 row7">8</th>
+                        <td id="T_d2252_row7_col0" class="data row7 col0">UTI</td>
+                        <td id="T_d2252_row7_col1" class="data row7 col1">2119441</td>
+                        <td id="T_d2252_row7_col2" class="data row7 col2">4</td>
+                        <td id="T_d2252_row7_col3" class="data row7 col3">nao</td>
+                        <td id="T_d2252_row7_col4" class="data row7 col4">1163902</td>
+                        <td id="T_d2252_row7_col5" class="data row7 col5">O paciente foi internado em UTI ?</td>
+            </tr>
+            <tr>
+                        <th id="T_d2252_level0_row8" class="row_heading level0 row8">9</th>
+                        <td id="T_d2252_row8_col0" class="data row8 col0">SUPORT_VEN</td>
+                        <td id="T_d2252_row8_col1" class="data row8 col1">2119441</td>
+                        <td id="T_d2252_row8_col2" class="data row8 col2">5</td>
+                        <td id="T_d2252_row8_col3" class="data row8 col3">2_sim | nao_invasivo</td>
+                        <td id="T_d2252_row8_col4" class="data row8 col4">965179</td>
+                        <td id="T_d2252_row8_col5" class="data row8 col5">O paciente fez uso de suporte ventilatório?</td>
+            </tr>
+    </tbody>
+</table>
+</div>
+
+</div>
+
 </div>
 </div>
 
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Na Tabela 2 são apresentadas a descrição e algumas informações referentes às duas variáveis referentes a datas, que podem ser tratadas como variáveis quantitativas.</p>
+<p><strong>Tabela 2 - Variáveis quantitativas: datas</strong></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<style type="text/css">
+    #T_6a0ca_ tr:hover {
+          background-color: #00BBBB;
+    }    #T_6a0ca_ th {
+          font-size: 110%;
+          text-align: center;
+    }    #T_6a0ca_ td {
+          text-align: center;
+    }    #T_6a0ca_ tbody .col8 {
+          width: 250px;
+          text-align: left;
+          padding-left: 20px;
+    }</style>
+<table id="T_6a0ca_">
+<thead>    <tr>        <th class="blank level0"></th>        <th class="col_heading level0 col0">Variável</th>        <th class="col_heading level0 col1">Contagem</th>        <th class="col_heading level0 col2">mean</th>        <th class="col_heading level0 col3">min</th>        <th class="col_heading level0 col4">25%</th>        <th class="col_heading level0 col5">50%</th>        <th class="col_heading level0 col6">75%</th>        <th class="col_heading level0 col7">max</th>        <th class="col_heading level0 col8">Descrição</th>    </tr>
+</thead>
+<tbody>
+                <tr>
+                        <th id="T_6a0ca_level0_row0" class="row_heading level0 row0">1</th>
+                        <td id="T_6a0ca_row0_col0" class="data row0 col0">DT_SIN_PRI</td>
+                        <td id="T_6a0ca_row0_col1" class="data row0 col1">2119441</td>
+                        <td id="T_6a0ca_row0_col2" class="data row0 col2">10-11-2020</td>
+                        <td id="T_6a0ca_row0_col3" class="data row0 col3">29-12-2019</td>
+                        <td id="T_6a0ca_row0_col4" class="data row0 col4">14-07-2020</td>
+                        <td id="T_6a0ca_row0_col5" class="data row0 col5">03-12-2020</td>
+                        <td id="T_6a0ca_row0_col6" class="data row0 col6">08-03-2021</td>
+                        <td id="T_6a0ca_row0_col7" class="data row0 col7">31-05-2021</td>
+                        <td id="T_6a0ca_row0_col8" class="data row0 col8">Data de primeiros sintomas.</td>
+            </tr>
+            <tr>
+                        <th id="T_6a0ca_level0_row1" class="row_heading level0 row1">2</th>
+                        <td id="T_6a0ca_row1_col0" class="data row1 col0">DT_NASC</td>
+                        <td id="T_6a0ca_row1_col1" class="data row1 col1">2116425</td>
+                        <td id="T_6a0ca_row1_col2" class="data row1 col2">30-04-1964</td>
+                        <td id="T_6a0ca_row1_col3" class="data row1 col3">18-09-1870</td>
+                        <td id="T_6a0ca_row1_col4" class="data row1 col4">30-05-1948</td>
+                        <td id="T_6a0ca_row1_col5" class="data row1 col5">21-07-1961</td>
+                        <td id="T_6a0ca_row1_col6" class="data row1 col6">29-04-1977</td>
+                        <td id="T_6a0ca_row1_col7" class="data row1 col7">29-05-2021</td>
+                        <td id="T_6a0ca_row1_col8" class="data row1 col8">Data de nascimento do paciente.</td>
+            </tr>
+    </tbody>
+</table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Por fim, na Tabela 3 são apresentadas as informações referentes à única variável quantitativa discreta. Conforme mencionado anteriormente, essa variável não está presente no dataset original, mas foi obtida a partir das duas variáveis da Tabela 2.</p>
+<p><strong>Tabela 3 - Variável quantitativa: discreta</strong></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<style type="text/css">
+    #T_456ac_ tr:hover {
+          background-color: #00BBBB;
+    }    #T_456ac_ th {
+          font-size: 110%;
+          text-align: center;
+    }    #T_456ac_ td {
+          text-align: center;
+    }    #T_456ac_ tbody .col9 {
+          width: 250px;
+          text-align: left;
+          padding-left: 20px;
+    }</style>
+<table id="T_456ac_">
+<thead>    <tr>        <th class="blank level0"></th>        <th class="col_heading level0 col0">Variável</th>        <th class="col_heading level0 col1">Contagem</th>        <th class="col_heading level0 col2">mean</th>        <th class="col_heading level0 col3">std</th>        <th class="col_heading level0 col4">min</th>        <th class="col_heading level0 col5">25%</th>        <th class="col_heading level0 col6">50%</th>        <th class="col_heading level0 col7">75%</th>        <th class="col_heading level0 col8">max</th>        <th class="col_heading level0 col9">Descrição</th>    </tr>
+</thead>
+<tbody>
+                <tr>
+                        <th id="T_456ac_level0_row0" class="row_heading level0 row0">1</th>
+                        <td id="T_456ac_row0_col0" class="data row0 col0">dv_idade_anos</td>
+                        <td id="T_456ac_row0_col1" class="data row0 col1">2119441</td>
+                        <td id="T_456ac_row0_col2" class="data row0 col2">56.03</td>
+                        <td id="T_456ac_row0_col3" class="data row0 col3">21.87</td>
+                        <td id="T_456ac_row0_col4" class="data row0 col4">0</td>
+                        <td id="T_456ac_row0_col5" class="data row0 col5">43</td>
+                        <td id="T_456ac_row0_col6" class="data row0 col6">59</td>
+                        <td id="T_456ac_row0_col7" class="data row0 col7">72</td>
+                        <td id="T_456ac_row0_col8" class="data row0 col8">150</td>
+                        <td id="T_456ac_row0_col9" class="data row0 col9">Idade do paciente no início dos primeiros sintomas (anos).</td>
+            </tr>
+    </tbody>
+</table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Estatística-Descritiva">
+<a class="anchor" href="#Estat%C3%ADstica-Descritiva" aria-hidden="true"><span class="octicon octicon-link"></span></a>Estatística Descritiva<a class="anchor-link" href="#Estat%C3%ADstica-Descritiva"> </a>
+</h2>
+<pre><code>Estatística descritiva
+    Apresente todas as variáveis individualmente e cruzando-as entre si, quando necessário. Exemplo: se você for apresentar a variável peso e a sua amostra contiver homens e mulheres, vale separar a variável entre homens e mulheres.
+    Utilize medidas-resumo e tabelas de distribuição de frequências e gráficos 
+    Utilize números de casas decimais adequados</code></pre>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -257,35 +527,6 @@ determinados segmentos.
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Descrição-das-Variáveis">
-<a class="anchor" href="#Descri%C3%A7%C3%A3o-das-Vari%C3%A1veis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Descrição das Variáveis<a class="anchor-link" href="#Descri%C3%A7%C3%A3o-das-Vari%C3%A1veis"> </a>
-</h2>
-<pre><code>Variáveis
-    Identifique-as e classifique-as.
-
-</code></pre>
-<p><a href="https://opendatasus.saude.gov.br/dataset/9f76e80f-a2f1-4662-9e37-71084eae23e3/resource/b3321e55-24e9-49ab-8651-29cf5c8f3179/download/dicionario-de-dados-srag-hospitalizado-27.07.2020-final.pdf">link para dicionário de dados</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Estatística-Descritiva">
-<a class="anchor" href="#Estat%C3%ADstica-Descritiva" aria-hidden="true"><span class="octicon octicon-link"></span></a>Estatística Descritiva<a class="anchor-link" href="#Estat%C3%ADstica-Descritiva"> </a>
-</h2>
-<pre><code>Estatística descritiva
-    Apresente todas as variáveis individualmente e cruzando-as entre si, quando necessário. Exemplo: se você for apresentar a variável peso e a sua amostra contiver homens e mulheres, vale separar a variável entre homens e mulheres.
-    Utilize medidas-resumo e tabelas de distribuição de frequências e gráficos 
-    Utilize números de casas decimais adequados</code></pre>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
